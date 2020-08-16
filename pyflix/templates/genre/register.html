@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../static/css/menu.css">
+    <link rel="stylesheet" href="../../static/css/crud.css">
     <title>Django APP</title>
 </head>
 <body>
     {% include "../menu.html" %}
     <main>
-        <h1 class="title"> Tag Main = Django app </h1>
+        <div>
+        <div class="container">    
+                <form onsubmit="genre" id="form-genre" method="POST">
+                    {{form}}
+                    {% csrf_token %}
+                    <input type="submit" class="submit" id="sendbutton" value="Send"/>
+                </form>
+            </div> 
+        </div>   
     </main>
 </body>
 </html>
